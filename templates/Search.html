@@ -1,0 +1,24 @@
+from flask import Flask, request
+from sqlalchemy import create_engine, text
+
+app = Flask(__name__)
+
+# Set up a database connection
+engine = create_engine('sqlite:///mydatabase.db')
+
+@app.route('/search')
+def search_records():
+    # Get the user input from the request object
+    search_term = request.args.get('search_term')
+    
+    # Generate an SQL query to retrieve records that match the search term
+    query = text("SELECT * FROM mytable WHERE name LIKE :search_term")
+    records = engine.execute(query, {'search_term': f'%{search_term}%'}).fetchall()
+    
+    # Return the records to the user in an HTML table
+    table_html = '<table>'
+    for record in records:
+        table_html += f'<tr><td>{record.name}</td><td>{record.email}</td></tr>'
+    table_html += '</table>'
+    
+    return table_html

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maintenance Report</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #e6e6fa; /* light purple hex code */;
+		}
+		h1 {
+			color: #333333;
+			text-align: center;
+			margin-top: 30px;
+		}
+		form {
+			background-color: #ffffff;
+			border: 1px solid #cccccc;
+			padding: 20px;
+			margin: 20px auto;
+			width: 80%;
+			max-width: 800px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			box-sizing: border-box;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+			color: #333333;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		input[type="text"],
+		textarea {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #cccccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+		textarea {
+			height: 100px;
+		}
+		button[type="submit"] {
+			background-color: #5a9faf;
+			color: #ffffff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		button[type="submit"]:hover {
+			background-color: #007acc;
+		}
+		p.error {
+			color: red;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+    <h1>Safety Report</h1>
+    <header class="head">
+        <h2><a href= "/" class="logo"> Safety Report</a></h2>
+        <ul>
+            <li><a href="/" class="active">Home</a></li>
+        </ul>
+
+        <div class="search bar">
+            <input 
+            spellcheck="false"
+            type="text"
+            placeholder="Search Safety Report..."
+            name="search"
+            id="search"
+            class="search"
+            />
+            <button class="search-button" id="search-button">Search</button>
+        </div>
+    </header>
+    <h2>Your Safety Report</h2>
+    <hr/>
+    <div class="table-div">
+        <table id="table">
+            <thead>
+              <tr>
+                <th> Student/Staff number </th>
+                <th>Title</th>
+                <th class="description row">Description</th>
+                <th class="description row">Solution</th>
+                <th>Campus</th> 
+                <th>Location</th> 
+                <th>Urgency</th> 
+                <th>Action</th> 
+              </tr>
+            </thead>
+            <tbody>
+                {%for tbl_SafteyR in SafteyR%}
+                <tr>
+                    <td>{{tbl_SafteyR.SStudStaffNo}}</td>
+                    <td>{{tbl_SafteyR.STitle}}</td>
+                    <td>{{tbl_SafteyR.SDescription}}</td>
+                    <td>{{tbl_SafteyR.SSolution}}</td>
+                    <td>{{tbl_SafteyR.SCampus}}</td>
+                    <td>{{tbl_SafteyR.SLocation}}</td>
+                    <td>{{tbl_SafteyR.SUrgency}}</td>
+                    <td> class="button-row">
+                        <a href="/" class="actions-btns edit">Edit</a>
+                        <a href="/" class="actions-btns delete">Delete</a>
+                    </td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</form>
+</body>
+</html>
+
+
+            
+            

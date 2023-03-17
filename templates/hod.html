@@ -1,0 +1,52 @@
+<?php
+session_start();
+
+// Check if admin is already logged in
+if (isset($_SESSION['admin_id'])) {
+    header('Location: admin_dashboard.php');
+    exit;
+}
+
+// Connect to MySQL database
+$connection = mysqli_connect('localhost', 'admin', 'password', 'users_database');
+
+// Check if login form is submitted
+if (isset($_POST['login'])) {
+    $username = mysqli_real_escape_string($connection, $_POST['username']);
+    $password = mysqli_real_escape_string($connection, $_POST['password']);
+
+    // Query the database for the admin credentials
+    $query = "SELECT * FROM admins WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($connection, $query);
+
+    // If the query returns a result, set the admin session variable and redirect to dashboard
+    if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['admin_id'] = $row['id'];
+        header('Location: admin_dashboard.php');
+        exit;
+    } else {
+        $error_msg = "Invalid login credentials";
+    }
+}
+
+mysqli_close($connection);
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+</head>
+<body>
+    <h1>Admin Login</h1>
+    <?php if (isset($error_msg)) echo "<p>$error_msg</p>"; ?>
+    <form method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br><br>
+        <input type="submit" name="login" value="Login">
+    </form>
+</body>
+</html>

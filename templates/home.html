@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="SAFETY AND MAINTENANCE&nbsp;​, SAFETY, MAINTENANCE">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../static/Home.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../static/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../static/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.6.2, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/t_dut-durban-university-of-technology3991.jpg"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-12f5"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="379" data-image-height="283">
+          <img src="../static/t_dut-durban-university-of-technology3991.jpg" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;">
+            <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-color u-custom-text-decoration u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <!-- <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg> -->
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-4 u-border-active-palette-1-base u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-white u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-base" href="Home.html" style="padding: 18px 24px;">Home</a>
+</li><li class="u-nav-item"><a class="u-border-4 u-border-active-palette-1-base u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-white u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-base" href="login" style="padding: 18px 24px;">Log in</a>
+</li><li class="u-nav-item"><a class="u-border-4 u-border-active-palette-1-base u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-white u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-base" href="{{ url_for('signup') }}" style="padding: 18px 24px;">Sign up</a>
+</li><li class="u-nav-item"><a class="u-border-4 u-border-active-palette-1-base u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-white u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-base" href="#" style="padding: 18px 19px 18px 24px;">Reporting options</a><div class="u-nav-popup"><ul class="u-border-1 u-border-grey-30 u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a href="{{ url_for('safety_report') }}" class="u-button-style u-grey-5 u-nav-link">Report Safety</a>
+</li><li class="u-nav-item"><a href="{{ url_for('maintenance_report') }}" class="u-button-style u-grey-5 u-nav-link">Report Maintanace</a>
+</li></ul>
+</div>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url_for('login') }}">Log in</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url_for('signup') }}">Sign up</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Reporting options</a><div class="u-nav-popup"><ul class="u-border-1 u-border-grey-30 u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a href="{{ url_for('safety_report') }}" class="u-button-style u-nav-link">Report Safety</a>
+</li><li class="u-nav-item"><a href="{{ url_for('maintenance_report') }}" class="u-button-style u-nav-link">Report Maintanace</a>
+</li></ul>
+</div>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+        <h1 class="u-align-left u-custom-font u-font-georgia u-text u-title u-text-1">SAFETY AND <span class="u-text-custom-color-1">MAINTENANCE</span>&nbsp; 
+        </h1>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="sec-9806">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-palette-1-light-3 u-size-30 u-layout-cell-1" src="">
+                    <div class="u-container-layout u-container-layout-1">
+                      <img class="u-image u-image-default u-image-1" src="../static/midlands.jpg" alt="" data-image-width="1275" data-image-height="850">
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-2">
+                      <h2 class="u-align-center u-custom-font u-font-georgia u-text u-text-1">SAFETY</h2>
+                      <h6 class="u-align-left u-custom-font u-font-arial u-text u-text-2">It is of great importance to the university that it ensures and assures its staff and students by providing and maintaining a satisfactory teaching and learning environmemt.</h6>
+                      <a href="" class="u-btn u-btn-rectangle u-button-style u-palette-1-base u-btn-1">Report safety</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-3">
+                    <div class="u-container-layout u-container-layout-3">
+                      <h2 class="u-align-center u-text u-text-3">MAINTENANCE&nbsp;</h2>
+                      <p class="u-align-left u-custom-font u-font-arial u-text u-text-4">DUT has created a platform that will enable both staff and students to report and upload maintenance and safety issues around the campus.&nbsp;</p>
+                      <a href="" class="u-btn u-btn-rectangle u-button-style u-palette-1-base u-btn-2">Report Maintenance</a>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-image u-layout-cell u-right-cell u-size-30 u-image-2" src="" data-image-width="846" data-image-height="580">
+                    <div class="u-container-layout u-valign-middle u-container-layout-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-4fa4"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-custom-font u-font-arial u-text u-text-1">SAFETY AND MAINTENANCE<span style="font-size: 1.25rem;">
+            <span style="font-size: 3rem;"></span>
+          </span>
+        </p>
+      </div></footer>
+    
+    </section>
+  
+</body></html>

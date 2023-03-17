@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="static\signup.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        input {
+            text-align: center;
+            font-family: 'Trebuchet MS';
+        }
+        ::-webkit-input-placeholder {
+            text-align: center;
+        }
+        input[type=text] {
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height:30px;
+        }
+
+        input[type=email] {
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height:30px;
+        }        
+
+        input[type=password] {
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height:30px;
+        }
+
+        input[type=submit] {
+            display: inline-block;
+            background-color: #5a9faf;
+            border: 10;
+            border-color: #204d57;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-family: 'Trebuchet MS';
+        }
+
+        input[type=submit]:hover {
+            display: inline-block;
+            background-color: #e9e9e9;
+            border: 10;
+            border-color: #204d57;
+            color: rgb(122, 179, 190);
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-family: 'Trebuchet MS';
+        }
+
+        h1 {
+          border: 1px solid whitesmoke;
+          margin-top: 10px;
+          margin-bottom: 30px;
+          margin-right: 400px;
+          margin-left: 400px;
+          background-color: whitesmoke;
+        }
+
+        form {
+          border: 1px solid rgb(87, 158, 193);
+          margin-top: 50px;
+          margin-bottom: 150px;
+          margin-right: 200px;
+          margin-left: 200px;
+          background-color: whitesmoke;
+          text-align: center;
+        }
+        label{
+            font-family: 'Trebuchet MS';
+        }
+
+
+        </style>
+    <body style="background-color:rgb(199, 234, 246);"> 
+          <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+             <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                              <a class="nav-link" href="#">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login/Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reporting Options</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> -->
+        <h1>SAFETY AND MAINTENANCE</h1>  
+        <p style="text-align: center;">Sign up to be able to report safety and maintenance problems around campus.</p>
+                <form method="POST" action="#">
+            
+                    <label for="user-type">User Type:</label>
+                    <br>
+                    <input type="radio" name="options" value="option1"> Staff
+                    <input type="radio" name="options" value="option2"> Student
+                    <br>
+                    <br>
+                    <label>Staff Number</label><br>
+                    <input type="text" name="StaffNo" size="35" placeholder="Enter staff number">
+                    <br>
+                    <br>
+                    <label>Student Number</label><br>
+                    <input type="text" name="StudentNo" size="35" placeholder="Enter student number">
+                    <br>
+                    <br>
+                    <label>Email</label><br>
+                    <input type="email" name="EmailAdress" size="35" placeholder="Enter email address " required>
+                    <br>
+                    <br>
+                    <label>Password</label><br>
+                    <input type="password" name="Password" size="35" placeholder="Enter password" required>
+                    <br>
+                    <br>
+                    <input type="submit" value="Sign Up">
+                    <br>
+                    <br>
+                    <a href="{{url_for('login')}}">Already have an account? Log in</a>
+                </form>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>                 
+     </body>
+
+</html>

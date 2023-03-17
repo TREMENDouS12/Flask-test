@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Safety Report</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #e6e6fa; /* light purple hex code */;
+		}
+		h1 {
+			color: #333333;
+			text-align: center;
+			margin-top: 30px;
+		}
+		form {
+			background-color: #ffffff;
+			border: 1px solid #cccccc;
+			padding: 20px;
+			margin: 20px auto;
+			width: 80%;
+			max-width: 800px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			box-sizing: border-box;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+			color: #333333;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		input[type="text"],
+		textarea {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #cccccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+		textarea {
+			height: 100px;
+		}
+		button[type="submit"] {
+			background-color: #5a9faf;
+			color: #ffffff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		button[type="submit"]:hover {
+			background-color: #007acc;
+		}
+		p.error {
+			color: red;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Safety Report</h1>
+	<form method="POST" enctype="multipart/form-data" action='{{url_for("safety_report")}}'>
+	<label for="student_number">Student Number:</label>
+	<input type="radio" id="student" name="user_type" value="student" checked>
+	<input type="text" id="student_number" name="student_number"><br><br>
+	<label for="staff_number">Staff Number:</label>
+	<input type="radio" id="staff" name="user_type" value="staff">
+	<input type="text" id="staff_number" name="staff_number"><br><br>
+	<label for="title">Title:</label>
+	<input type="text" id="title" name="title"><br><br>
+	<label for="description">Description:</label>
+	<textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+	<label for="suggestion">Suggestion:</label>
+	<textarea id="suggestion" name="suggestion" rows="4" cols="50"></textarea><br><br>
+	<label for="campus">Campus:</label>
+	<input type="text" id="campus" name="campus"><br><br>
+	<label for="Location">Location:</label>
+	<input type="text" id="Location" name="Location"><br><br>
+	<label for="urgency">Urgency</label>
+	<input type="radio" id="urgency" name="urgency" value=1>1
+	<input type="radio" id="urgency" name="urgency2" value=2>2
+	<input type="radio" id="urgency" name="urgency3" value=3>3
+	<input type="radio" id="urgency" name="urgency" value=4>4
+	<input type="radio" id="urgency" name="urgency2" value=5>5<br><br>
+	<button type="submit" value="Submit"> Submit</button>
+</form>
+</body>
+</html>
+
+
+            
+            

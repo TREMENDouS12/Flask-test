@@ -1,0 +1,48 @@
+<?php
+session_start();
+
+// Check if admin is logged in
+if (!isset($_SESSION['admin_id'])) {
+    header('Location: admin_login.php');
+    exit;
+}
+
+// Connect to MySQL database
+$connection = mysqli_connect('localhost', 'admin', 'password', 'users_database');
+
+// Check if add user form is submitted
+if (isset($_POST['add_user'])) {
+    $username = mysqli_real_escape_string($connection, $_POST['username']);
+    $password = mysqli_real_escape_string($connection, $_POST['password']);
+
+    // Insert the user into the database
+    $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+    mysqli_query($connection, $query);
+
+    $success_msg = "User added successfully";
+}
+
+mysqli_close($connection);
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, Admin!</h1>
+    <form method="post">
+        <h2>Add User</h2>
+        <?php if (isset($success_msg)) echo "<p>$success_msg</p>"; ?>
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br><br>
+        <input type="submit" name="add_user" value="Add User">
+    </form>
+    <br><br>
+    <a href="logout.php">Logout</a>
+</body>
+</html>
+``
